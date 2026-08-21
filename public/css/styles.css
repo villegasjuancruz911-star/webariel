@@ -1,0 +1,80 @@
+/* ============================================
+   Estilos complementarios - Pintura Industrial
+   Tailwind CSS se carga vía CDN
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset para anclas con header fijo */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Transiciones suaves en navbar */
+#header.scrolled {
+  background-color: rgba(15, 23, 42, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Spinner del botón de envío */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 0.8s linear infinite;
+}
+
+/* Feedback del formulario */
+#form-feedback.success {
+  background-color: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #6ee7b7;
+}
+
+#form-feedback.error {
+  background-color: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+}
+
+/* Filtros de proyectos */
+.filter-btn.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Focus visible mejorado para accesibilidad */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Placeholder de imágenes de proyectos (cuando no hay fotos reales) */
+.proyecto-card .aspect-\[4\/3\] {
+  background: linear-gradient(135deg, #334155 0%, #0f172a 100%);
+}
+
+/* Animación sutil de entrada */
+@media (prefers-reduced-motion: no-preference) {
+  .proyecto-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+}
+
+/* Ajuste para móviles del botón WhatsApp */
+@media (max-width: 640px) {
+  #whatsapp-btn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
